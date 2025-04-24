@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ФармаГид - Ваш медицинский помощник</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/zaiqoo.png" alt="PharmaGuide Logo">
+        </div>
+        <div class="user-section">
+            <div class="avatar">
+                <img src="images/avatar.png" alt="User Avatar">
+            </div>
+            <div class="user-info">
+                <span class="user-name">Личный кабинет</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="chatbot-section">
+            <div class="chatbot-block">
+                <h1><i class="fas fa-comment-dots"></i> Спросите у ФармаБота</h1>
+                <p class="subtitle">Чат с умным ассистентом по лекарствам</p>
+                <button class="ask-question">Задать вопрос</button>
+                <div class="common-questions">
+                    <p class="question-text" data-question="Как принимать?">Как принимать?</p>
+                    <p class="question-text" data-question="Аналоги?">Аналоги?</p>
+                    <p class="question-text" data-question="С чем нельзя совмещать?">С чем нельзя совмещать?</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="popular-drugs">
+            <h2>Популярные препараты</h2>
+            <div class="drug-cards">
+                <div class="drug-card">
+                    <div class="drug-card-content">
+                        <img src="images/pill.png" alt="Препарат 1">
+                        <h3>Аспирин</h3>
+                        <p class="price">930₸</p>
+                        <button class="details-button" data-drug="aspirin">
+                            Подробнее
+                            <span class="tooltip">Нажмите для получения информации о препарате</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="drug-card">
+                    <div class="drug-card-content">
+                        <img src="images/capsule.png" alt="Препарат 2">
+                        <h3>Парацетамол</h3>
+                        <p class="price">500₸</p>
+                        <button class="details-button" data-drug="paracetamol">
+                            Подробнее
+                            <span class="tooltip">Нажмите для получения информации о препарате</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="drug-card">
+                    <div class="drug-card-content">
+                        <img src="images/bottle.png" alt="Препарат 3">
+                        <h3>Нурофен</h3>
+                        <p class="price">1550₸</p>
+                        <button class="details-button" data-drug="nurofen">
+                            Подробнее
+                            <span class="tooltip">Нажмите для получения информации о препарате</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="recommendation">
+            <p>Принимайте витамины группы В утром — они бодрят!</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>SanteriaTechnologies</p>
+    </footer>
+
+    <div class="modal" id="chatModal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="chat-container">
+                <p class="made-by">Made by Santeria</p>
+            </div>
+            <iframe
+                src="https://www.chatbase.co/chatbot-iframe/DurZuZMvP_BSPW3N8qq37"
+                width="100%"
+                style="height: 100%; min-height: 700px"
+                frameborder="0">
+            </iframe>
+        </div>
+    </div>
+
+    <div class="modal" id="drugModal">
+        <div class="modal-content drug-modal-content">
+            <span class="close-button">&times;</span>
+            <div class="drug-info">
+                <h2 class="drug-title"></h2>
+                <div class="drug-description">
+                    <!-- Аспирин -->
+                    <div class="drug-content" data-drug="aspirin">
+                        <p><strong>Фармакологическое действие:</strong> Аспирин - нестероидный противовоспалительный препарат, обладающий жаропонижающим, обезболивающим и противовоспалительным действием.</p>
+                        <p><strong>Показания к применению:</strong></p>
+                        <ul>
+                            <li>Болевой синдром различного происхождения</li>
+                            <li>Повышенная температура тела</li>
+                            <li>Ревматические заболевания</li>
+                            <li>Профилактика тромбозов</li>
+                        </ul>
+                        <p><strong>Противопоказания:</strong> Язвенная болезнь желудка, бронхиальная астма, нарушения свертываемости крови, беременность.</p>
+                    </div>
+                    <!-- Парацетамол -->
+                    <div class="drug-content" data-drug="paracetamol">
+                        <p><strong>Фармакологическое действие:</strong> Парацетамол - анальгетик-антипиретик, оказывает жаропонижающее и обезболивающее действие.</p>
+                        <p><strong>Показания к применению:</strong></p>
+                        <ul>
+                            <li>Головная боль</li>
+                            <li>Зубная боль</li>
+                            <li>Боли в мышцах и суставах</li>
+                            <li>Повышенная температура тела</li>
+                        </ul>
+                        <p><strong>Противопоказания:</strong> Тяжелые нарушения функции печени и почек, алкоголизм, детский возраст до 3 месяцев.</p>
+                    </div>
+                    <!-- Нурофен -->
+                    <div class="drug-content" data-drug="nurofen">
+                        <p><strong>Фармакологическое действие:</strong> Нурофен - нестероидный противовоспалительный препарат на основе ибупрофена, обладает выраженным обезболивающим, жаропонижающим и противовоспалительным действием.</p>
+                        <p><strong>Показания к применению:</strong></p>
+                        <ul>
+                            <li>Головная боль и мигрень</li>
+                            <li>Зубная боль</li>
+                            <li>Боли в спине и суставах</li>
+                            <li>Менструальные боли</li>
+                            <li>Повышенная температура тела</li>
+                        </ul>
+                        <p><strong>Противопоказания:</strong> Язвенная болезнь желудка, тяжелая сердечная недостаточность, нарушения свертываемости крови, беременность.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="accountModal">
+        <div class="modal-content account-modal-content">
+            <span class="close-button">&times;</span>
+            <div class="account-form">
+                <h2>Регистрация</h2>
+                <form id="registrationForm">
+                    <div class="form-group">
+                        <label for="name">Имя</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Пароль</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Подтвердите пароль</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    </div>
+                    <button type="submit" class="submit-button">Зарегистрироваться</button>
+                </form>
+                <div class="form-footer">
+                    <p>Уже есть аккаунт? <a href="#" class="login-link">Войти</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
